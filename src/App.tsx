@@ -1,9 +1,15 @@
-import { StudyMode } from "./components/StudyMode/StudyMode";
+import { useState } from "react";
+import { StudyMode } from "./pages/StudyMode/StudyMode";
+import { ModeContext, type ActiveMode } from "./utils/ModeContext";
 
 export const App = () => {
+  const [activeMode, setActiveMode] = useState<ActiveMode>("study");
+
   return (
-    <div className="App">
-      <StudyMode />
-    </div>
+    <ModeContext.Provider value={{ activeMode, setActiveMode }}>
+      <div className="App">
+        <StudyMode />
+      </div>
+    </ModeContext.Provider>
   );
 };

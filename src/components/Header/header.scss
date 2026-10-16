@@ -1,0 +1,43 @@
+@use "../../variables" as *;
+
+.header {
+  --button-surface: #{$yellow500};
+  --button-border: 1px solid #{$neutral900};
+
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  &-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  &-modes {
+    display: flex;
+    gap: 0.7rem;
+    border: 1px solid $neutral900;
+    border-radius: 1.5rem;
+    padding: 0.1rem;
+    box-shadow: 0.15rem 0.15rem $neutral900;
+    color: $neutral900;
+
+    &_btn,
+    .inactive {
+      border: var(--button-border);
+      background-color: var(--button-surface);
+      border-radius: 1.5rem;
+      font-weight: 600;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.inactive {
+  --button-surface: #{$neutral0};
+  --button-border: none;
+}
