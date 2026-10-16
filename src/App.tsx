@@ -1,3 +1,9 @@
+import { StudyMode } from "./components/StudyMode/StudyMode";
+
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <StudyMode />
+    </>
+  );
 };
