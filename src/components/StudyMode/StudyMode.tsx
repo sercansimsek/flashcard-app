@@ -1,5 +1,5 @@
 import "./studymode.scss";
 
 export const StudyMode = () => {
-  return <div>studymode</div>;
+  return <div className="studymode">studymode</div>;
 };
